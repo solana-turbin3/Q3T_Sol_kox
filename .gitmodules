@@ -1,0 +1,21 @@
+[submodule "talent-olympics/dao-voting"]
+	path = talent-olympics/dao-voting
+	url = https://github.com/kox/talent-olympics-dao-voting
+[submodule "talent-olympics/meme-predictions"]
+	path = talent-olympics/meme-predictions
+	url = https://github.com/kox/talent-olympics-meme-predictions
+[submodule "talent-olympics/mint-lock-swap-nfts"]
+	path = talent-olympics/mint-lock-swap-nfts
+	url = https://github.com/kox/talent-olympics-mint-lock-swap-nfts
+[submodule "talent-olympics/two-sided-marketplace"]
+	path = talent-olympics/two-sided-marketplace
+	url = https://github.com/kox/talent-olympics-two-sided-marketplace
+[submodule "talent-olympics/whitelist-gated"]
+	path = talent-olympics/whitelist-gated
+	url = https://github.com/kox/talent-olympics-whitelist-gated
+[submodule "bridge-to-turbin3"]
+	path = bridge-to-turbin3
+	url = https://github.com/kox/bridge-to-turbin3-homework-1
+[submodule "blinks"]
+	path = blinks
+	url = https://github.com/kox/fastify-solana-blinks.git
