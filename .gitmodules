@@ -19,3 +19,9 @@
 [submodule "blinks"]
 	path = blinks
 	url = https://github.com/kox/fastify-solana-blinks.git
+[submodule "turbin3-cli"]
+	path = turbin3-cli
+	url = https://github.com/kox/wba-turbin3-cohort.git
+[submodule "anchor-vote"]
+	path = anchor-vote
+	url = https://github.com/kox/turbin3-vote.git
