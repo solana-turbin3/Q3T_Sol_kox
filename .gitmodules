@@ -25,3 +25,6 @@
 [submodule "anchor-vote"]
 	path = anchor-vote
 	url = https://github.com/kox/turbin3-vote.git
+[submodule "anchor-escrow"]
+	path = anchor-escrow
+	url = https://github.com/kox/anchor-escrow.git
