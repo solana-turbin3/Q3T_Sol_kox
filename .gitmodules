@@ -31,3 +31,6 @@
 [submodule "anchor-vault"]
 	path = anchor-vault
 	url = https://github.com/kox/anchor-vault.git
+[submodule "anchor-amm"]
+	path = anchor-amm
+	url = https://github.com/kox/anchor-amm.git
