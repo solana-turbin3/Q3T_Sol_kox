@@ -243,7 +243,7 @@ TBD
 ---
 
 <details>
-<summary>Capstone</summary>
+<summary>Anchor NFT Staking</summary>
 
 <br />
 
@@ -251,6 +251,113 @@ TBD
 ### Introduction
 
 TBD
+
+[comment]: <> (Extend Catistics)
+</details>
+
+---
+
+<details>
+<summary>Capstone</summary>
+
+<br />
+
+[comment]: <> (Describe)
+### Introduction
+
+My capstone project aims to create a platform that allows users to deploy customizable vaults on Solana. The platform is designed to start with simple vault structures that can be tailored to meet various needs and strategies.
+
+### Goal
+
+The primary objective is to offer a flexible platform for building and managing vaults, while also providing tools for options, analytics, and strategy development. 
+
+The platform will integrate  Solana Blinks for facilitating the customer acquisition. 
+
+### Technology Stack
+
+* Blockchain: Solana
+* Smart Contracts: Anchor
+* Customer Acquisition: Solana Blinks
+* Frontend: React
+* Backend: Fastify
+
+The roadmap is pretty extensive so I hope to keep it simple and see where it takes me.
+
+## User Stories
+
+User Story 1: Basic Vault Creation
+
+    As a user, I want to create a new vault, so that I can have my own DEFI solution.
+
+User Story 2: Deposit Tokens
+
+    As a user, I want to allow to deposit tokens into my vault, so that my vault can safely keep the assets.
+
+User Story 3: Withdraw Tokens
+
+    As a user, I want to allow withdraws of tokens from my vault, so that someone can receive them whenever needed.
+
+User Story 4: View Vault Balance
+
+    As a user, I want to view the balance of tokens in my vault, so that I can track my assets easily.
+
+User Story 5: Login with Solana Wallet
+
+    As a user, I want to log in the platform using my Solana wallet, so that I can securely access my vault with minimal friction.
+
+User Story 6: Visualize All Vaults
+
+    As a user, I want to visualize all my vaults on a single dashboard, so that I can manage my assets efficiently.
+
+User Story 7: User-Friendly Vault Interface
+
+    As a user, I want the vault interface to be user-friendly, so that I can easily navigate and use the platform.
+
+User Story 8: Generate Shareable Links for Vaults
+
+    As a user, I want to generate shareable blinks for my vaults, so that I can easily share access with others.
+
+User Story 9: Customize Vault Settings
+
+    As a user, I want to customize the settings of my vaults (e.g., access permissions, names), so that they meet my specific needs.
+
+User Story 10: View Transaction History
+
+    As a user, I want to view the transaction history of my vaults, so that I can track all past deposits and withdrawals.
+
+User Story 11: Security Alerts for Vault Activity
+
+    As a user, I want to receive security alerts for any activity in my vaults, so that I can be informed of any unauthorized access.
+
+User Story 12: Visualize Vault Data
+
+    As a user, I want to visualize my vault data, so that I can have an idea of the settings and current valuable information.
+
+User Story 13: View Detailed Token Information
+
+    As a user, I want to view detailed information about the tokens in my vault, so that I can better understand my assets.
+
+User Story 14: Responsive UI Design
+
+    As a user, I want the UI to be responsive, so that I can manage my vaults easily on both desktop and mobile devices.
+
+User Story 16: Real-Time Vault Updates
+
+    As a user, I want to receive real-time updates on my vault balances and activities, so that I can stay informed without refreshing the page.
+
+User Story 17: Integration with Solana DApps
+
+    As a user, I want the vault platform to integrate with other Solana DApps, so that I can seamlessly use tje vault funds across the Solana ecosystem.
+
+User Story 18: Share Vaults with Trusted Users
+
+    As a user, I want to be able to restrict specific vaults with trusted users, so that I can create safer funds.
+
+User Story 19: Secure Logout and Session Management
+
+    As a user, I want a secure logout option and proper session management, so that my access to the vault platform is protected when I'm not using it.
+
+TBC
 
 [comment]: <> (Extend Catistics)
 </details>
