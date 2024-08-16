@@ -34,3 +34,6 @@
 [submodule "anchor-amm"]
 	path = anchor-amm
 	url = https://github.com/kox/anchor-amm.git
+[submodule "anchor-nft-stake"]
+	path = anchor-nft-stake
+	url = https://github.com/kox/anchor-nft-stake.git
