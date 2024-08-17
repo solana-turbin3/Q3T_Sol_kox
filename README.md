@@ -285,79 +285,180 @@ The roadmap is pretty extensive so I hope to keep it simple and see where it tak
 
 ## User Stories
 
-User Story 1: Basic Vault Creation
+## A) Solana Program
 
-    As a user, I want to create a new vault, so that I can have my own DEFI solution.
 
-User Story 2: Deposit Tokens
+### **Vault Creation and Management**
 
-    As a user, I want to allow to deposit tokens into my vault, so that my vault can safely keep the assets.
+1. **Vault Creation**
+    
+    - As a **vault creator**, I want to create a new tokenize vault, so that I can manage shared assets securely.
+    - **Acceptance Criteria:**
+        - The vault can be created with a unique identifier.
+        - The vault creator is automatically assigned as the initial owner.
+    
+1. **Shared Funding Setup**
+    
+    - As a **vault creator**, I want to enable shared funding for my vault, so that multiple users can contribute to the vault.
+    - **Acceptance Criteria:**
+        - The vault creator can specify the shared funding option during vault creation.
+        - Multiple vault users can deposit assets into the vault.
+        - The vault tracks individual contributions.
+    
+1. **kTokens or NFTs for Shared Weight**
+    
+    - As a **vault creator**, I want to issue kTokens or NFTs to contributors, so that their share in the vault is tracked accurately.
+    - **Acceptance Criteria:**
+        - Contributors receive kTokens or NFTs proportional to their contribution.
+        - The kTokens or NFTs represent the contributor's share and can be transferred.
 
-User Story 3: Withdraw Tokens
+1. **Whitelist Management**
+    
+    - As a **vault creator**, I want to manage a whitelist of users, so that only authorized users can interact with the vault.
+    - **Acceptance Criteria:**
+        - The vault creator can add or remove users from the whitelist.
+        - Only whitelisted users can deposit, withdraw, or interact with the vault.
+        
+1. **Lock Vault Functionality**
+    
+    - As a **vault creator**, I want to lock the vault, so that no further deposits or withdrawals can be made.
+    - **Acceptance Criteria:**
+        - The vault creator can lock and unlock the vault.
+        - Once locked, no deposits or withdrawals are allowed until it is unlocked.
 
-    As a user, I want to allow withdraws of tokens from my vault, so that someone can receive them whenever needed.
+1. **Contribution Interval of Time **
+    
+    - As a **vault creator**, I want to be able to set an open and close timestamp to restrict users, so that no further deposits or withdrawals can be made before or after the interval.
+    - **Acceptance Criteria:**
+        - The vault creator can add an opening and closing timestamp for deposits.
+        - Once out of the interval, no deposits are allowed.
 
-User Story 4: View Vault Balance
+### **Basic Vault Usage. Deposits and Withdrawals**
 
-    As a user, I want to view the balance of tokens in my vault, so that I can track my assets easily.
+7. **Deposit Assets**
+    
+    - As a **vault user**, I want to deposit assets into the vault, so that I can contribute to the shared pool.
+    - **Acceptance Criteria:**
+        - Vault users can deposit supported tokens or NFTs into the vault.
+        - Depositors receive kTokens or NFTs representing their contribution.
+        
+1. **Withdraw Assets**
+    
+    - As a **vault user**, I want to withdraw my share of assets from the vault, so that I can access my contributed funds.
+    - **Acceptance Criteria:**
+        - Vault users can withdraw assets proportional to their kTokens or NFTs.
+        - The withdrawal amount is correctly calculated based on the user's share.
 
-User Story 5: Login with Solana Wallet
+1. **Partial Withdrawals**
+    
+    - As a **vault user**, I want to make partial withdrawals from the vault, so that I can access some of my funds while leaving the rest in the vault.
+    - **Acceptance Criteria:**
+        - Vault users can specify the amount to withdraw.
+        - The corresponding kTokens or NFTs are burned or adjusted based on the withdrawal amount.
+        
+1. **View Deposit and Withdrawal History**
+    
+    - As a **vault user**, I want to view my deposit and withdrawal history, so that I can track my interactions with the vault.
+    - **Acceptance Criteria:**
+        - Vault users can view a list of all their deposit and withdrawal transactions.
+        - Each transaction includes details such as date, amount, and type of asset.
+        - This data should be saved in a off-chain database
 
-    As a user, I want to log in the platform using my Solana wallet, so that I can securely access my vault with minimal friction.
+1. **Automated Distribution of Returns**
+    
+    - As a **vault creator**, I want to automate the distribution of returns or profits to users based on their share, so that all contributors are fairly compensated.
+    - **Acceptance Criteria:**
+	    - The returns or profits should be calculated automatically based on the share represented.
+        - Vault users should get updated periodically their portion of returns without manual intervention.
 
-User Story 6: Visualize All Vaults
+1. **Include the minimum and maximum amount per transfer**
+    
+    - As a **vault user**, I want to avoid deposits or withdraws smaller or higher than some amounts, so it doesn't impact the vault in a negative way.
+    - **Acceptance Criteria:**
+        - Vault creators can include a min and max per transfer in the vault configuration.
+        - Every deposit or withdraw has to check if exceed the limit.
+        - A clear message to the user should be notified.
 
-    As a user, I want to visualize all my vaults on a single dashboard, so that I can manage my assets efficiently.
+### **Advanced Vault Features**
 
-User Story 7: User-Friendly Vault Interface
+13. **Vault Maturity Date**
+    
+    - As a **vault creator**, I want to set a maturity date for the vault, so that the assets can only be withdrawn after a certain period.
+    - **Acceptance Criteria:**
+        - The vault creator can set a maturity date during creation.
+        - Withdrawals are restricted until the maturity date is reached.
+    
+1. **Early Withdrawal Penalty**
+    
+    - As a **vault creator**, I want to implement an early withdrawal penalty, so that users are discouraged from withdrawing before the maturity date.
+    - **Acceptance Criteria:**
+        - The vault applies a penalty fee to withdrawals made before the maturity date.
+        - The penalty fee is configurable by the vault creator.
+        
+1. **Vault Performance Metrics**
+    
+    - As a **vault user**, I want to view performance metrics of the vault, so that I can assess the growth and returns on my contribution.
+    - **Acceptance Criteria:**
+        - Vault users can access metrics such as total assets, return on investment (ROI), and historical performance.
+        - The metrics are updated in real-time based on vault activities.
+        
+1. **Transfer kTokens or NFTs**
+    
+    - As a **vault user**, I want to transfer my kTokens or NFTs to another user, so that I can transfer my share of the vault.
+    - **Acceptance Criteria:**
+        - Vault users can transfer their kTokens or NFTs to any other user.
+        - The recipient inherits the share of the vault represented by the transferred tokens.
+        
+1. **Convert kTokens to Underlying Assets**
+    
+    - As a **vault user**, I want to convert my kTokens back to the underlying assets, so that I can exit the vault.
+    - **Acceptance Criteria:**
+        - Vault users can redeem their kTokens for the corresponding amount of assets.
+        - The vault's total supply is updated accordingly after conversion.
+        - The tokens or NFT could be burn or sent to shared vault.
+        
 
-    As a user, I want the vault interface to be user-friendly, so that I can easily navigate and use the platform.
+### **User Roles and Permissions**
 
-User Story 8: Generate Shareable Links for Vaults
+18. **Assign Multiple Vault Administrators**
+    
+    - As a **vault creator**, I want to assign multiple administrators to the vault, so that they can help manage the vault.
+    - **Acceptance Criteria:**
+        - The vault creator can assign and revoke administrative roles to other users.
+        - Administrators have the same permissions as the vault creator, excluding the ability to delete the vault.
+        - A multi-sign mechanism should get implemented for security reasons.
+     
+1. **Restrict Withdrawals to Whitelisted Addresses**
+    
+    - As a **vault creator**, I want to restrict withdrawals to specific whitelisted addresses, so that I can control where assets are sent.
+    - **Acceptance Criteria:**
+        - The vault creator can specify a list of addresses that are allowed to receive withdrawals.
+        - Withdrawals can only be made to whitelisted addresses.
+        
+1. **Lock Vault After a Certain Number of Transactions**
+    
+    - As a **vault creator**, I want to automatically lock the vault after a certain number of transactions, so that I can limit vault activity.
+    - **Acceptance Criteria:**
+        - The vault locks automatically after a predefined number of transactions.
+        - Further deposits or withdrawals are blocked until the vault is unlocked.
+    - 
+1. **Transfer Vault Ownership**
+    
+    - As a **vault creator**, I want to transfer ownership of the vault to another user, so that they can take over the management of the vault.
+    - **Acceptance Criteria:**
+        - The vault creator can transfer ownership to any other user.
+        - The new owner inherits all rights and permissions of the vault creator.
+        -
+1. **Delete Vault**
+    
+    - As a **vault creator**, I want to delete a vault, so that I can remove it from the platform if it is no longer needed.
+    - **Acceptance Criteria:**
+        - The vault creator can delete the vault only if all assets have been withdrawn.
+        - Deleting the vault removes all associated data and transactions from the platform.
 
-    As a user, I want to generate shareable blinks for my vaults, so that I can easily share access with others.
+## B) Platform
 
-User Story 9: Customize Vault Settings
 
-    As a user, I want to customize the settings of my vaults (e.g., access permissions, names), so that they meet my specific needs.
-
-User Story 10: View Transaction History
-
-    As a user, I want to view the transaction history of my vaults, so that I can track all past deposits and withdrawals.
-
-User Story 11: Security Alerts for Vault Activity
-
-    As a user, I want to receive security alerts for any activity in my vaults, so that I can be informed of any unauthorized access.
-
-User Story 12: Visualize Vault Data
-
-    As a user, I want to visualize my vault data, so that I can have an idea of the settings and current valuable information.
-
-User Story 13: View Detailed Token Information
-
-    As a user, I want to view detailed information about the tokens in my vault, so that I can better understand my assets.
-
-User Story 14: Responsive UI Design
-
-    As a user, I want the UI to be responsive, so that I can manage my vaults easily on both desktop and mobile devices.
-
-User Story 16: Real-Time Vault Updates
-
-    As a user, I want to receive real-time updates on my vault balances and activities, so that I can stay informed without refreshing the page.
-
-User Story 17: Integration with Solana DApps
-
-    As a user, I want the vault platform to integrate with other Solana DApps, so that I can seamlessly use tje vault funds across the Solana ecosystem.
-
-User Story 18: Share Vaults with Trusted Users
-
-    As a user, I want to be able to restrict specific vaults with trusted users, so that I can create safer funds.
-
-User Story 19: Secure Logout and Session Management
-
-    As a user, I want a secure logout option and proper session management, so that my access to the vault platform is protected when I'm not using it.
-
-TBC
 
 [comment]: <> (Extend Catistics)
 </details>
