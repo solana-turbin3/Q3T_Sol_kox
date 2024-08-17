@@ -456,7 +456,94 @@ The roadmap is pretty extensive so I hope to keep it simple and see where it tak
         - The vault creator can delete the vault only if all assets have been withdrawn.
         - Deleting the vault removes all associated data and transactions from the platform.
 
-## B) Platform
+## B) Platform 
+
+### Administration
+
+1. **Set Platform Fee**
+
+    - As a platform admin user, I want to set a platform fee for all vault transactions, so that the platform can generate revenue.
+    - **Acceptance Criteria:**
+        - The platform user can define a fee percentage to be applied to all vault transactions.
+        - The fee is automatically deducted from each transaction.
+
+1. **Manage Platform Settings**
+    - As a platform user, I want to manage basic platform settings, so that I can configure the overall platform behavior.
+    - **Acceptance Criteria:**
+        - The platform user can configure global settings such as maximum vault creation limits, supported token types, and access permissions.
+        - Changes to settings are applied globally and immediately.
+
+1. **View Platform Metrics** 
+    - As a platform user, I want to view key metrics such as total vaults created, total platform fees collected, and active users, so that I can monitor the platform's performance.
+    - **Acceptance Criteria:**
+        - The platform displays real-time metrics, including the number of vaults, total transactions, and fees collected.
+        - Metrics can be filtered by date and user activity.
+
+### Vault Creation
+
+4. **Create a Vault**
+    - As a vault creator user, I want to create a new vault on the platform, so that I can manage shared assets.
+    - **Acceptance Criteria:**
+        - The vault creator can create a vault with basic options like vault name and initial deposit.
+        - The vault is created successfully and listed under the vault creator's account.
+
+1. **Set Vault Parameters**
+    - As a vault creator user, I want to set vault parameters like whitelisted users and shared funding options, so that I can control who interacts with the vault.
+    - **Acceptance Criteria:**
+        - The vault creator can whitelist specific users and enable or disable shared funding.
+        - Parameters can be modified at any time with immediate effect.
+
+1. **View Vault Details**
+        As a vault creator user, I want to view detailed information about my vault, so that I can monitor its status and activity.
+        Acceptance Criteria:
+            The vault creator can access a dashboard showing vault balances, user contributions, and transaction history.
+            All information is presented in a clean and organized manner.
+
+1. **Delete Vault**
+        As a vault creator user, I want to delete a vault if it is no longer needed, so that I can manage my vaults efficiently.
+    - **Acceptance Criteria:**
+            The vault creator can delete a vault, but only if all assets have been withdrawn.
+            Deleting the vault removes it from the platform, along with its data.
+
+### Vault User 
+
+8. **Deposit into Vault**
+    - As a vault user, I want to deposit tokens into a vault, so that I can contribute to shared assets.
+    - **Acceptance Criteria:**
+        - The vault user can deposit supported tokens into any vault they have access to.
+        - Deposits are tracked and reflected in the user's share of the vault.
+
+1. **Withdraw from Vault**
+    - As a vault user, I want to withdraw tokens from a vault, so that I can access my share of the assets.
+    - **Acceptance Criteria:**
+        -  The vault user can withdraw tokens proportional to their contribution.
+        -  The user's vault balance is updated after the withdrawal.
+
+1. **View Vault Participation**
+    - As a vault user, I want to view my participation in various vaults, so that I can track my contributions and returns.
+    - **Acceptance Criteria:**
+        - The vault user can see a list of vaults they are involved in, along with their contributions and current balances.
+        - The information is updated in real-time and presented clearly.
+
+1. **Transfer kTokens or NFTs**
+    - As a vault user, I want to transfer my kTokens or NFTs to another user, so that I can transfer my vault share.
+    - **Acceptance Criteria:**
+        - The vault user can transfer kTokens or NFTs representing their share to any other user.
+        - The recipient inherits the vault share associated with the transferred tokens.
+
+1. **Redeem kTokens for Assets**
+    - As a vault user, I want to redeem my kTokens for the underlying assets in the vault, so that I can exit the vault.
+    - **Acceptance Criteria:**
+        - The vault user can redeem their kTokens for an equivalent amount of the vault's assets.
+        - The vault's total supply is updated after redemption.
+
+1. **View Transaction History**
+    - As a vault user, I want to view my transaction history within a vault, so that I can keep track of my deposits and withdrawals.
+    - **Acceptance Criteria:**
+        - The vault user can access a detailed transaction history, including dates, amounts, and types of transactions.
+        - The history is filterable by date and transaction type.
+
+
 
 
 
