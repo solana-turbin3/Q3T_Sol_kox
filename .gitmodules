@@ -16,9 +16,6 @@
 [submodule "bridge-to-turbin3"]
 	path = bridge-to-turbin3
 	url = https://github.com/kox/bridge-to-turbin3-homework-1
-[submodule "blinks"]
-	path = blinks
-	url = https://github.com/kox/fastify-solana-blinks.git
 [submodule "turbin3-cli"]
 	path = turbin3-cli
 	url = https://github.com/kox/wba-turbin3-cohort.git
