@@ -37,3 +37,9 @@
 [submodule "capstone"]
 	path = capstone
 	url = https://github.com/kox/vrepo
+[submodule "blinks/rug-server"]
+	path = blinks/rug-server
+	url = https://github.com/kox/fastify-solana-blinks.git
+[submodule "blinks/production-server"]
+	path = blinks/production-server
+	url = https://github.com/kox/solana-blink-fastify-lambda
