@@ -37,3 +37,6 @@
 [submodule "anchor-nft-stake"]
 	path = anchor-nft-stake
 	url = https://github.com/kox/anchor-nft-stake.git
+[submodule "capstone"]
+	path = capstone
+	url = https://github.com/kox/vrepo
