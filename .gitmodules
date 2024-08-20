@@ -43,3 +43,6 @@
 [submodule "blinks/production-server"]
 	path = blinks/production-server
 	url = https://github.com/kox/solana-blink-fastify-lambda
+[submodule "anchor-nft-core-stake"]
+	path = anchor-nft-core-stake
+	url = https://github.com/kox/anchor-nft-core-stake.git
