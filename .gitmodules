@@ -46,3 +46,6 @@
 [submodule "capstone"]
 	path = capstone
 	url = https://github.com/kox/vplex.git
+[submodule "anchor-marketplace"]
+	path = anchor-marketplace
+	url = https://github.com/kox/anchor-marketplace.git
