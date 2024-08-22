@@ -49,3 +49,6 @@
 [submodule "anchor-marketplace"]
 	path = anchor-marketplace
 	url = https://github.com/kox/anchor-marketplace.git
+[submodule "anchor-dice-game"]
+	path = anchor-dice-game
+	url = https://github.com/kox/anchor-dice-game.git
